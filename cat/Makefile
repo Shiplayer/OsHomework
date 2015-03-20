@@ -4,14 +4,11 @@ LDFLAGS=-L../lib -Wl,-rpath=../lib -lhelpers
 
 all: cat
 
-cat: cat.o libhelpers
+cat: cat.o
 	${CC} cat.o ${LDFLAGS} -o cat
 
 cat.o:
 	${CC} ${CFLAGS} -c cat.c
-
-libhelpers:
-	${MAKE} -C ../lib
 
 clean:
 	rm -f cat.o cat
