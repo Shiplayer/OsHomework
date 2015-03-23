@@ -10,4 +10,4 @@ helpers.o: helpers.c
 	$(CC) -c $(CFLAGS) helpers.c -o helpers.o
 
 clean:
-	rm -f libhelpers.so libhelpers.o
+	rm -f libhelpers.so helpers.o
